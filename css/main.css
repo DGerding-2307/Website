@@ -1,5 +1,10 @@
 * {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
+}
+
+.wrapper {
+  max-width: 1400px;
+  margin: auto;
 }
 
 body,
@@ -37,5 +42,105 @@ html {
 
 .hero-text h1 {
   font-size: 50px;
+}
+
+.navigation {
+  position: fixed;
+  width: 100%;
+  top: 0px;
+  left: 0px;
+  margin: 0px;
+  background-color: #262626;
+}
+
+.navigation .nav-container nav .nav-list {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  float: left;
+}
+
+.navigation .nav-container nav .nav-list .menu-item {
+  display: inline-block;
+  padding: 10px;
+  margin-right: 10px;
+}
+
+.navigation .nav-container nav .nav-list .menu-item span {
+  color: white;
+  cursor: pointer;
+}
+
+.navigation .nav-container nav .nav-list .menu-item .nav-dropdown {
+  display: none;
+  position: absolute;
+  background-color: white;
+  padding: 20px;
+  margin-top: 10px;
+  list-style: none;
+  min-width: -webkit-fit-content;
+  min-width: -moz-fit-content;
+  min-width: fit-content;
+}
+
+@media screen and (max-width: 1200px) {
+  .navigation .nav-container nav .nav-list .menu-item .nav-dropdown.right-10 {
+    right: 10px;
+  }
+}
+
+.navigation .nav-container nav .nav-list .menu-item .nav-dropdown li {
+  margin-bottom: 5px;
+}
+
+.navigation .nav-container nav .nav-list .menu-item .nav-dropdown li a {
+  text-decoration: none;
+  color: black;
+}
+
+.navigation .nav-container nav .nav-list .menu-item:hover .nav-dropdown {
+  display: block;
+}
+
+#leden {
+  margin-top: 80px;
+}
+
+#leden .wrapper h1 {
+  font-size: 3rem;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+#leden .wrapper p {
+  width: 800px;
+  margin: auto;
+  margin-bottom: 40px;
+}
+
+#leden .wrapper .leden {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 300px 300px 300px 300px;
+      grid-template-columns: 300px 300px 300px 300px;
+  -webkit-column-gap: 66.6px;
+          column-gap: 66.6px;
+}
+
+#leden .wrapper .leden .lid img {
+  overflow: hidden;
+  border-radius: 50%;
+  width: 300px;
+  height: 300px;
+}
+
+#leden .wrapper .leden .lid h3 {
+  text-align: center;
+}
+
+spacer {
+  display: block;
+  height: 110vw;
 }
 /*# sourceMappingURL=main.css.map */
