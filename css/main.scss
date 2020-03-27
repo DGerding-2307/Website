@@ -19,11 +19,32 @@ html {
   background-size: cover;
   position: relative;
 }
+@keyframes fade_from_bottom {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.5);
+  }
+  90% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.05);
+  }
+  95% {
+    transform: translate(-50%, -50%) scale(1.02);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
 
 .hero-text {
+  animation: fade_from_bottom 1s;
+
+  opacity: 1;
   padding: 25px;
   background-color: rgba(0, 0, 0, 0.3);
+
   backdrop-filter: blur(3px);
+
   text-align: center;
   border-radius: 51px;
   position: absolute;
@@ -56,7 +77,9 @@ html {
 
           padding: 10px;
           margin-right: 10px;
-          span {
+          span,
+          a {
+            text-decoration: none;
             color: white;
             cursor: pointer;
           }
@@ -70,8 +93,17 @@ html {
             list-style: none;
 
             min-width: fit-content;
+            @media screen and(max-width: 360px) {
+              right: 10px;
+            }
+
+            &:not(:first-child) {
+              @media screen and(max-width: 500px) {
+                right: 10px;
+              }
+            }
             &.right-10 {
-              @media screen and(max-width: 1200px) {
+              @media screen and(max-width: 1000px) {
                 right: 10px;
               }
             }
@@ -98,8 +130,9 @@ html {
 #leden {
   margin-top: 80px;
   .wrapper {
+    font-size: 1.25em;
     h1 {
-      font-size: 3rem;
+      font-size: 3em;
       text-align: center;
       text-transform: uppercase;
       font-weight: 400;
@@ -108,12 +141,27 @@ html {
       width: 800px;
       margin: auto;
       margin-bottom: 40px;
+      font-size: 1em;
     }
 
     .leden {
       display: grid;
       grid-template-columns: 300px 300px 300px 300px;
       column-gap: 66.6px;
+
+      @media screen and (max-width: 1400px) {
+        grid-template-columns: 300px 300px 300px;
+      }
+      @media screen and (max-width: 1000px) {
+        grid-template-columns: 300px 300px;
+      }
+      @media screen and (max-width: 600px) {
+        grid-template-columns: 300px 300px;
+      }
+      @media screen and (max-width: 300px) {
+        grid-template-columns: 300px;
+      }
+
       .lid {
         img {
           overflow: hidden;
@@ -129,7 +177,108 @@ html {
   }
 }
 
+footer {
+  box-sizing: border-box;
+  background-color: #262626;
+  height: 100px;
+  padding: 42px;
+  p {
+    width: fit-content;
+    margin: auto;
+    font-size: 16px;
+    color: #9f9f9f;
+  }
+}
+
 spacer {
   display: block;
   height: 110vw;
+}
+
+/* Table style */
+.content {
+  $table-border-color: hsl(220, 20%, 80%);
+  $table-stripe-color: hsl(220, 70%, 94%);
+  html {
+    background: linear-gradient(-45deg, hsl(220, 20%, 10%), hsl(220, 20%, 40%));
+    padding: 1rem;
+  }
+  body {
+    background: linear-gradient(-45deg, hsl(220, 20%, 80%), hsl(220, 20%, 95%));
+    padding: 3rem;
+    color: hsl(220, 10%, 40%);
+  }
+  legend,
+  th {
+    color: hsl(220, 80%, 10%);
+  }
+  table {
+    //background: hsla(220, 0%, 100%, 0.9);
+    border-collapse: collapse;
+    margin: 2rem 0 0;
+    text-align: left;
+    width: 100%;
+  }
+  caption {
+    padding: 1rem;
+    font-style: italic;
+    font-size: 12px;
+    text-align: left;
+    caption-side: bottom;
+  }
+  tbody {
+    background-color: hsla(220, 0%, 100%, 0.9);
+  }
+  thead {
+    background-color: hsla(220, 20%, 95%, 0.9);
+    th,
+    td {
+      border-bottom-width: 2px;
+    }
+  }
+  th,
+  td {
+    border: 1px solid $table-border-color;
+    border-color: transparent transparent $table-border-color transparent;
+    padding: 1rem;
+  }
+  .compact {
+    th,
+    td {
+      padding: 0.5rem;
+    }
+  }
+  .bordered {
+    th,
+    td {
+      border-color: hsl(220, 20%, 80%);
+    }
+  }
+  .striped {
+    tbody tr:nth-child(odd) {
+      background-color: $table-stripe-color;
+    }
+  }
+
+  code {
+    font-family: monospace;
+    font-weight: bold;
+    color: hsl(50, 100%, 10%);
+    background: hsla(50, 100%, 50%, 0.8);
+    border-radius: 2px;
+  }
+
+  img {
+    width: 800px;
+  }
+
+  h1 {
+    font-size: 4rem;
+  }
+  h2 {
+    font-size: 2.75rem;
+  }
+  p {
+    font-size: 1.5rem;
+  }
 }

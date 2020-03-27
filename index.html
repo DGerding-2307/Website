@@ -24,6 +24,7 @@
     <div class="nav-container wrapper">
       <nav>
         <ul class="nav-list">
+          <li class="menu-item"><a href="/"> Home </a></li>
           <li class="menu-item">
             <span role="button">Fase 1</span>
               <ul class="nav-dropdown">
@@ -36,7 +37,7 @@
           <li class="menu-item">
             <span role="button">Fase 2</span>
               <ul class="nav-dropdown">
-                <li><a href="2-1.html"> 1.1 Doelgroeponderzoek </a></li>
+                <li><a href="2-1.html"> 2.1 Doelgroeponderzoek </a></li>
                 <li><a href="2-2.html"> 2.2 Vergelijkbare producten onderzoek </a></li>
                 <li><a href="2-3.html"> 2.3 Functioneel ontwerp </a></li>
               </ul>
@@ -93,6 +94,8 @@
                 <li><a href="7-6.html"> 7.6 Onderhudt contact met de klant </a></li>
               </ul>
           </li>
+          <li class="menu-item"><a href="/index.html#leden">Over ons</a></li>
+          
         </ul>
       </nav>
     </div>
@@ -102,8 +105,14 @@
     <div class="wrapper">
       <h1> onze groep </h1>
       <p>
+        <!--
+          PAS DEZE TEXT AAN VOOR DE GROEPSTEXT
+        -->
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic vitae mollitia delectus temporibus nam fugiat molestias optio cum vel id esse blanditiis labore voluptatum deserunt dignissimos reprehenderit, consequuntur similique in.
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perspiciatis ipsum dolor neque assumenda iure delectus minima vero omnis iste dolorem molestiae labore ullam velit hic ratione sapiente odit, error nam!
+        <!--
+          STOP HIER MET TYPEN
+        -->
       </p>
 
       <div class="leden">
@@ -127,37 +136,9 @@
 
     </div>
   </section>
-  <spacer></spacer>
-
-  <spacer></spacer>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-  <script>
-    (function ($) { // Begin jQuery
-      $(function () { // DOM ready
-        // If a link has a dropdown, add sub menu toggle.
-        $('nav ul li a:not(:only-child)').click(function (e) {
-          $(this).siblings('.nav-dropdown').toggle();
-          // Close one dropdown when selecting another
-          $('.nav-dropdown').not($(this).siblings()).hide();
-          e.stopPropagation();
-        });
-        // Clicking away from dropdown will remove the dropdown class
-        $('html').click(function () {
-          $('.nav-dropdown').hide();
-        });
-        // Toggle open and close nav styles on click
-        $('#nav-toggle').click(function () {
-          $('nav ul').slideToggle();
-        });
-        // Hamburger to X toggle
-        $('#nav-toggle').on('click', function () {
-          this.classList.toggle('active');
-        });
-      }); // end DOM ready
-    })(jQuery); // end jQuery</script>
-
-
-  <spacer></spacer>
+  <footer>
+    <p>Copyright © 2020 All rights reserved | Made by Michel Gerding</p>
+  </footer>
 </body>
 
 </html>
