@@ -104,10 +104,11 @@ html {
 
 #leden {
   margin-top: 80px;
+  font-size: 1.25em;
 }
 
 #leden .wrapper h1 {
-  font-size: 3rem;
+  font-size: 3em;
   text-align: center;
   text-transform: uppercase;
   font-weight: 400;
@@ -117,6 +118,7 @@ html {
   width: 800px;
   margin: auto;
   margin-bottom: 40px;
+  font-size: 1em;
 }
 
 #leden .wrapper .leden {
