@@ -257,17 +257,6 @@ spacer {
 }
 
 /* Table style */
-.content html {
-  background: linear-gradient(-45deg, #14181f, #525f7a);
-  padding: 1rem;
-}
-
-.content body {
-  background: linear-gradient(-45deg, #c2c9d6, #f0f1f5);
-  padding: 3rem;
-  color: #5c6370;
-}
-
 .content legend,
 .content th {
   color: #05132e;
@@ -283,7 +272,7 @@ spacer {
 .content caption {
   padding: 1rem;
   font-style: italic;
-  font-size: 12px;
+  font-size: 1em;
   text-align: left;
   caption-side: bottom;
 }
