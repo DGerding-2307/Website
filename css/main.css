@@ -230,6 +230,9 @@ html {
 #leden .wrapper .leden .lid h3 {
   text-align: center;
 }
+#leden .wrapper h3 {
+ tex-align:center; 
+}
 
 footer {
   -webkit-box-sizing: border-box;
