@@ -114,9 +114,41 @@
      <br>
      <br>
      <h2>Functioneel ontwerp</h2>
-     <p>Hier komt te staan hoe wij het ontwerp uit willen werken</p>
-     <p>we nemen de onderdelen van het programma van eisen en werken hier uit hoe we dat voor elkaar willen krijgen</p>
-     <p>dit doen we voor de elektro wtb en voor de het programma</p>
+     <br>
+     <br>
+     <h2>Elketro</h2>
+     <h3>De transportkar moet zelfsturend/zelfrijdend worden d.m.v. sensoren die op het voertuig geplaatst worden</h3>
+     <p>Om de kar zelfrijdend te maken gebruiken wij drie sensoren. Een sensor recht vooruit, een sensor links voor en een sensor rechts voor. Niet voor alle richtingen gebruiken wij de zelfde sensor. Wij hebben hier voor gekozen omdat de optische sensoren een kleinere range hebben dan de sensoren die op geluid werken.</p>
+     <br>
+     <p> Bij de voorste sensor hebben wij gekozen om de sensor op geluid te kiezen en bij de zijkanten gebruiken wij de optische sensoren. Deze sensoren communiceren dan weer met de arduino die weer met de raspberry pi communiceert zodat de software dit kan verwerken.</p>
+    <br>
+    <br>
+    <h3>De motorbediening moet worden uitgevoerd d.m.v.een printplaat</h3>
+    <p>Op onze kar komt een printplaat, deze printplaat word onder andere gebruikt voor de motorregeling en voor de besturing van de lampen en knoppen. Deze printplaat word door ons zelf ontworpen en geproduceerd.</p>
+    <br>
+    <p>De printplaat word gemaakt met behulp van de multisim ultibot software. Hiermee kunnen wij er voor zorgen dat de printplaat er professioneel en representatief uit komt te zien. </p>
+    <br>
+    <br>
+    <h3>De besturing mag worden uitgevoerd met een PLC besturing of een Arduino</h3>
+    <p>Voor onze besturing hebben wij gekozen om gebruik te maken van een combinatie van Arduino en een Raspberry pi. We hebben hiervoor gekozen omdat wij op deze manier veel rekenkracht hebben voor het berekenen van de route maar ook omdat wij op deze manier een website kunnen maken voor onze kar.</p>
+    <br>
+    <p>In deze combinatie word de arduino vooral gebruikt voor het bedienen van de in en uitgangen. Daarentegen is de Raspberry pi het brein van de zelfrijdende kar en zal deze de arduino opdrachten geven.</p>
+    <br>
+    <br>
+    <h3>Voor de ingangen gebruik je drievoudige etageklemmen en voor de uitgangen tweevoudige etageklemmen</h3>
+    <p>Voor onze kar hebben wij ook een elektro-bak nodig hierin worden alle elektronische componenten geplaatst die nodig zijn voor de werking van de kar. Voor het aansluiten van onze kar volgen wij de NEN60204 dit is een richtlijn voor de machinebouw. Hierin staat alles beschreven waar onze kar aan moet voldoen ten opzichte van veiligheid. Daarnaast gebruiken wij voor de ingangen drie voudige klemmen en voor de uitgangen 2 voudige klemmen.</p>
+    <br>
+    <p>Om de veiligheid te waarborgen moeten we een aantal veiligheidsmechanismes inbouwen. Hieronder vallen bijvoorbeeld de noodstop en de lichtsignalen. Indien er op de noodstop word gedrukt word de motor direct spanningsloos.</p>
+    <br>
+    <p>Een andere veiligheidseis is dat de kar maximaal 10 kilometer per uur mag rijden. Dit is lossen wij op door in de software de snelheid te limiteren</p>
+    <br>
+    <br>
+    <h2>Programma</h2>
+    <p>Voor het programma hebben we gekozen om de uit te lichten met een functieblok diagram.</p>
+    <br>
+    <h2>Hoofdprogramma</h2>
+    <img src="./img/Hoofdprogramma.png" alt="Hoofdprogramma">
+    
     </section>
     <footer>
         <p>Copyright © 2020 All rights reserved | Made by Michel Gerding</p>
