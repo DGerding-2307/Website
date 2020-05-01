@@ -339,20 +339,66 @@ spacer {
 .content p {
   font-size: 1.5rem;
 }
-
-.download{
-  width: 300px;
-  border: 5px solid darkgray;
-  border-radius: 15px;  
+#download h1 {
+  font-size: 5rem
 }
-.download-header{
+
+#download .downloads {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  grid-gap: 1rem;
+}
+
+#download .downloads .download-card {
+  border: 1px solid black;
+  border-radius: 10px;
+  height: 500px;
+
+  overflow: hidden;
+
+  position: relative;
+}
+
+#download .downloads .download-card .title {
+  font-size: 2em;
+  line-height: 1.5em;
+  
+  background-color: black;
+  margin: 0px;
+  padding: 20px ;
+  height: 50px;
+  color: white;
+}
+
+#download .downloads .download-card .spacer {
   position: absolute;
-  top: 80px;
-  right: 0;
-  width: 200px;
-  height: 100px;
-  border: 3px solid #73AD21;
+  bottom: 0px;
+  height: 3.5em;
+  width:100%;
+  background-color: black;
 }
 
-/*# sourceMappingURL=main.css.map */
+#download .downloads .download-card .subtitle {
+  margin-left: 20px;
+  font-size: 1.25em;
+}
 
+#download .downloads .download-card ul {
+  list-style: none;
+  padding: 20px;
+}
+
+#download .downloads .download-card ul li{
+  display: flex;
+  justify-content: space-between;
+  font-size: 1em;
+  padding-bottom: 5px;
+  border-bottom: 1px solid rgba(0,0,0,0.2);
+
+  margin: 10px 0px;
+}
+
+#download .downloads .download-card ul li a {
+  text-decoration: none;
+  position: relative;
+}
